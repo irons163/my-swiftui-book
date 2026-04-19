@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwiftUI 實戰</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <style>
+    :root {
+      --theme-color: #1f7a6b;
+    }
+    .sidebar > h1 a {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .markdown-section {
+      max-width: 900px;
+    }
+    .markdown-section blockquote {
+      border-left-color: #1f7a6b;
+    }
+    .cover-main > p:last-child a {
+      background-color: #1f7a6b;
+      border-color: #1f7a6b;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: "SwiftUI 實戰",
+      repo: "",
+      loadSidebar: true,
+      subMaxLevel: 2,
+      auto2top: true,
+      relativePath: true,
+      homepage: "README.md",
+      alias: {
+        "/.*/_sidebar.md": "/_sidebar.md"
+      },
+      search: {
+        maxAge: 86400000,
+        paths: "auto",
+        placeholder: "搜尋章節",
+        noData: "找不到內容"
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+</body>
+</html>
