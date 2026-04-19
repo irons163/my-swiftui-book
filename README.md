@@ -60,7 +60,9 @@
 
 - `docs/`
   提供 GitBook 發布用的乾淨內容根目錄，只保留前言、正文章節與附錄，不把提案文案與工作檔一起公開。
-  另外也補上 `docsify` 本機預覽所需的 `index.html` 與 `_sidebar.md`，可先在本機看近似文件站效果。
+
+- `preview/`
+  提供 `docsify` 本機預覽用的介面檔，會讀取 `docs/` 內容，避免 GitBook 把 `_sidebar` 這類預覽檔一起匯進站點。
 
 - `templates/chapter-template.md`
   後續若要新增附錄、番外章或延伸章節，可沿用的模板。
@@ -91,6 +93,9 @@ my-swiftui-book/
 ├── .gitbook.yaml
 ├── BOOK_BLUEPRINT.md
 ├── WRITING_GUIDE.md
+├── preview/
+│   ├── index.html
+│   └── _sidebar.md
 ├── templates/
 │   └── chapter-template.md
 └── book/
@@ -140,6 +145,21 @@ my-swiftui-book/
     ├── chapters/
     └── appendices/
 ```
+
+## 本機預覽
+
+如果你要在本機看近似文件站效果，現在請從專案根目錄啟動伺服器：
+
+```bash
+cd /Users/phil/Documents/my-swiftui-book
+python3 -m http.server 8123
+```
+
+然後打開：
+
+- `http://127.0.0.1:8123/preview/`
+
+這樣 `preview/` 會讀取 `docs/` 內容做本機預覽，同時又不會讓 GitBook 把 `_sidebar` 這類預覽檔匯進正式站點。
 
 ## 如果你現在要繼續往下做
 
